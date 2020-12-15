@@ -27,6 +27,7 @@ X_train, X_test, y_train, y_test = train_test_split(itens, classificacao, test_s
 
 from sklearn.neighbors import KNeighborsClassifier
 kn = int(input())
+#neigh = KNeighborsClassifier(n_neighbors=kn,weights="distance")
 neigh = KNeighborsClassifier(n_neighbors=kn)
 #Treinando
 neigh.fit(X_train, y_train)

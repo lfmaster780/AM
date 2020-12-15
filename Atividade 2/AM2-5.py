@@ -53,7 +53,8 @@ total = len(teste)
 
 from sklearn.neighbors import KNeighborsClassifier
 
-neigh = KNeighborsClassifier(n_neighbors=7)
+neigh = KNeighborsClassifier(n_neighbors=7,weights="distance")
+#neigh = KNeighborsClassifier(n_neighbors=7)
 #Treinando
 neigh.fit(itens, classificacao)
 

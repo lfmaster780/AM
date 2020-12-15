@@ -35,7 +35,7 @@ arquivo.close()
 def distancia(test,train):
     soma = 0
     for j in range(len(test)):
-        mult = float(test[j])-float(train[j])
+        mult = abs(float(test[j])-float(train[j]))
         mult = mult**2
         soma += mult
 
@@ -48,7 +48,7 @@ acertos = 0
 def minkowski(test,train,p):
     soma = 0
     for j in range(len(test)):
-        modulo = float(test[j])-float(train[j])
+        modulo = abs(float(test[j])-float(train[j]))
         mult = modulo**p
         soma += mult
 
